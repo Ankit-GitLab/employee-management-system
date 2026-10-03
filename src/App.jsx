@@ -1,14 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Login from './components/Auth/Login'
 import EmployeeDashboard from './components/Dashboard/EmployeeDashboard'
 import AdimDashboard from './components/Dashboard/AdimDashboard'
+import { setLocalStorage } from './utils/LocalStorage'
+import { getLocalStorage } from './utils/LocalStorage'
+
 
 const App = () => {
+
+  useEffect(() => {
+    setLocalStorage()
+    getLocalStorage()
+  },[])
+  
+
+
   return (
     <>
-    {/* <Login /> */}
+    <Login />
     {/* <EmployeeDashboard /> */}
-    <AdimDashboard />
+    {/* <AdimDashboard /> */}
     </>
   )
 }
