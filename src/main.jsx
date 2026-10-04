@@ -4,7 +4,8 @@ import './index.css'
 import App from './App.jsx'
 import AuthProvider from './context/AuthProvider.jsx'
 
-// localStorage.clear() // for clear the local storage
+
+// console.log(localStorage.clear());// for clear the local storage
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

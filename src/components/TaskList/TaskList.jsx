@@ -1,53 +1,22 @@
 import React from 'react'
+import AcceptTask from './AcceptTask';
+import NewTask from './NewTask';
+import FailedTask from './FailedTask';
+import CompletedTask from './CompletedTask';
 
-const TaskList = () => {
+const TaskList = ({data}) => {
+    
   return (
-    <div id='tasklist' className='h-[55%] overflow-x-auto flex w-full items-center flex-nowrap justify-start py-5  mt-10 gap-5'>
+    <div id='tasklist' className='h-[55%] w-full overflow-x-auto flex items-center flex-nowrap justify-start py-5  mt-10 gap-5'>
 
-        <div className='h-full shrink-0 w-75 p-5 bg-red-400 rounded-xl'>
-            <div className='flex justify-between items-center'>
-                <h3 className='bg-red-600 px-3 py-1 text-sm rounded-xl'>High</h3>
-                <h4 className='text-sm'>20 feb 2024</h4>
-            </div>
-            <h2 className='mt-5 text-2xl font-semibold'>Learn react project</h2>
-            <p className='text-sm mt-3'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi odio eaque pariatur voluptas aut minus.
-            </p>
-        </div>
+        <AcceptTask />
 
-        <div className='h-full shrink-0 w-75 p-5 bg-green-400 rounded-xl'>
-            <div className='flex justify-between items-center'>
-                <h3 className='bg-red-600 px-3 py-1 text-sm rounded-xl'>High</h3>
-                <h4 className='text-sm'>20 feb 2024</h4>
-            </div>
-            <h2 className='mt-5 text-2xl font-semibold'>Learn react project</h2>
-            <p className='text-sm mt-3'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi odio eaque pariatur voluptas aut minus.
-            </p>
-        </div>
+        <NewTask />
 
-        <div className='h-full shrink-0 w-75 p-5 bg-blue-400 rounded-xl'>
-            <div className='flex justify-between items-center'>
-                <h3 className='bg-red-600 px-3 py-1 text-sm rounded-xl'>High</h3>
-                <h4 className='text-sm'>20 feb 2024</h4>
-            </div>
-            <h2 className='mt-5 text-2xl font-semibold'>Learn react project</h2>
-            <p className='text-sm mt-3'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi odio eaque pariatur voluptas aut minus.
-            </p>
-        </div>
+        <CompletedTask />
 
-        <div className='h-full shrink-0 w-75 p-5 bg-yellow-400 rounded-xl'>
-            <div className='flex justify-between items-center'>
-                <h3 className='bg-red-600 px-3 py-1 text-sm rounded-xl'>High</h3>
-                <h4 className='text-sm'>20 feb 2024</h4>
-            </div>
-            <h2 className='mt-5 text-2xl font-semibold'>Learn react project</h2>
-            <p className='text-sm mt-3'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi odio eaque pariatur voluptas aut minus.
-            </p>
-        </div>
-        
+        <FailedTask />
+    
     </div>
   )
 }
