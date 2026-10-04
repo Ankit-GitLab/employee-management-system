@@ -12,7 +12,7 @@ const FailedTask = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi odio eaque pariatur voluptas aut minus.
             </p>
             <div className='flex justify-center mt-20'>
-                <button className='bg-blue-800 w-full py-1 px-2 text-sm'>Completed</button>
+                <button className='bg-blue-800 w-full py-1 px-2 text-sm'>Failed</button>
             </div>
     </div>
   )

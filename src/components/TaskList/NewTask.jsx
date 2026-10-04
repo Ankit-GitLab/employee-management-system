@@ -12,7 +12,7 @@ const NewTask = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi odio eaque pariatur voluptas aut minus.
             </p>
             <div className='flex justify-center mt-20'>
-                <button className='bg-green-800 py-1 px-2 text-sm'>Accepted Task</button>
+                <button className='bg-green-800 w-full py-1 px-2 text-sm'>Accepted Task</button>
             </div>
     </div>
   )
