@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CompletedTask = () => {
+const CompletedTask = ({data}) => {
   return (
     <div className='h-full shrink-0 w-75 p-5 bg-yellow-400 rounded-xl'>
             <div className='flex justify-between items-center'>

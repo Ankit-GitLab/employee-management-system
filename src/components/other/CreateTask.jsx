@@ -4,7 +4,7 @@ const CreateTask = () => {
   return (
     <div>
         <div className='p-5 bg-[#1c1c1c] mt-7 rounded'>
-            <form className='flex flex-wrap w-full bg-red-200 items-start justify-between rounded'>
+            <form className='flex flex-wrap w-full bg-red-400 items-start justify-between rounded'>
                 <div className='w-1/2 m-5'>
                     <div>
                         <h3 className='text-sm text-gray-300 mb-0.5'>Task Title</h3>
