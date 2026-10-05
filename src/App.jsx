@@ -1,9 +1,8 @@
 import Login from './components/Auth/Login'
 import EmployeeDashboard from './components/Dashboard/EmployeeDashboard'
 import AdimDashboard from './components/Dashboard/AdimDashboard'
-import { useContext, useEffect, useState} from 'react'
+import { useContext,  useState} from 'react'
 import { AuthContext } from './context/AuthProvider'
-// import { useEffect } from 'react'
 // import { setLocalStorage } from './utils/LocalStorage'
 
 
@@ -14,15 +13,20 @@ const [user, setUser] = useState(null)
 const [loggedInUserData, setLoggedInUserData] = useState(null)
 const authData = useContext(AuthContext)
 
-useEffect(() => {
-  const loggedInUser = localStorage.getItem('loggedInUser')
+// useEffect(() => {
+//   setLocalStorage()
+// }, [])
+
+
+// useEffect(() => {
+//   const loggedInUser = localStorage.getItem('loggedInUser')
   
-  if(loggedInUser){
-    const userData = JSON.parse(loggedInUser)
-    setUser(userData.role)
-    setLoggedInUserData(userData.data)    
-  }
-},[])
+//   if(loggedInUser){
+//     const userData = JSON.parse(loggedInUser)
+//     setUser(userData.role)
+//     setLoggedInUserData(userData.data)    
+//   }
+// },[])
 
   
 
@@ -30,7 +34,7 @@ useEffect(() => {
 
 const handleLogin = (email,password) =>{
   if(email == 'ankit@gmail.com' && password == "1234"){
-    setUser({role:'admin'});
+    setUser('admin');
     localStorage.setItem("loggedInUser",JSON.stringify({role:'admin'}));
   }else if(authData){
     const employee = authData.employees.find((e)=>email == e.email && password == e.password);
